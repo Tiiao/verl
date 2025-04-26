@@ -318,6 +318,7 @@ class RayPPOTrainer:
             self.use_critic = True
         elif self.config.algorithm.adv_estimator in [
             AdvantageEstimator.GRPO,
+            AdvantageEstimator.GRPO_PASSK,
             AdvantageEstimator.REINFORCE_PLUS_PLUS,
             AdvantageEstimator.REMAX,
             AdvantageEstimator.RLOO,
