@@ -217,7 +217,7 @@ def compute_grpo_passk_outcome_advantage(
             else:
                 if target_k > 1:
                 # add weighting corresponding to pass@k objective
-                    scores[i] = (scores[i] - id2mean[index[i]]) * (1 - id2mean[index[i]]) ** (k - 1)
+                    scores[i] = (scores[i] - id2mean[index[i]]) * (1 - id2mean[index[i]]) ** (target_k - 1)
                 else:
                     scores[i] = scores[i] - id2mean[index[i]]
         scores = scores.unsqueeze(-1) * response_mask
