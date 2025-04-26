@@ -219,7 +219,6 @@ def compute_advantage(data: DataProto, adv_estimator, target_k=1, gamma=1.0, lam
             response_mask=data.batch["response_mask"],
             index=data.non_tensor_batch["uid"],
             target_k=target_k,
-            num_repeat=num_repeat,
         )
         data.batch["advantages"] = advantages
         data.batch["returns"] = returns
